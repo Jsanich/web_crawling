@@ -1,4 +1,4 @@
-"""네이트 종합 관심뉴스 1~50위 수집 및 핵심 문장 추출 요약.
+"""네이트 종합 관심뉴스 상위 10개 수집 및 핵심 문장 추출 요약.
 
 실행: python 06_nate_ranking.py
 옵션: python 06_nate_ranking.py --limit 10 --sentences 2
@@ -119,7 +119,7 @@ def summarize(lines, title, count):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--limit", type=int, default=50, help="수집 개수 (1~50, 기본 50)")
+    parser.add_argument("--limit", type=int, default=10, help="수집 개수 (1~50, 기본 10)")
     parser.add_argument("--sentences", type=int, default=2, help="요약 문장 수 (기본 2)")
     parser.add_argument("--delay", type=float, default=0.7, help="기사 요청 사이 대기 초")
     args = parser.parse_args()
